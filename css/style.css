@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+}
+.container {
+    display: grid;
+    /* grid-template-columns: 20% 60% 20%; */
+    grid-template: 200px 200px 200px 200px/ 25% 50% 25%;
+    /* grid-column-gap: 10px; */
+    grid-gap: 5px;
+}
+/* con esta tipo de seudo clase elejimos como cuarto elemento */
+.item:nth-of-type(5){
+    /* background: #01024e; */
+    background-color: blue;
+    overflow: auto;
+    display: grid;
+    grid-template: 100px 100px/ 50% 50%;
+    /* grid-column-gap: 5px; */
+    /* grid-row-gap: 5px; */
+    /* con esta opcion utilizamos las dos ultimas */
+    grid-gap: 5px;
+}
+.item .item:nth-of-type(1){
+    background-color: #293462;
+}
+.item .item:nth-of-type(2){
+    background-color: #216583;
+}
+.item .item:nth-of-type(3){
+    background-color: #00818a;
+}
+.item .item:nth-of-type(4){
+    background-color: #f7be16;
+}
+
+.item {
+    color: white;
+    background-color: #cf455c;
+    padding: 5px;
+    /* cuando le aplicamos margin como tan aumenta el espaciado de nuestros elementos pero que tal si quiero ese espacio pero sin afectar mi elemento */
+    /* margin-right: 10px; */
+    /* margin-bottom: 10px; */
+    /* usamos; */
+    /* grid-column-gap */
+}

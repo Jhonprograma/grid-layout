@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Instagran</title>
+<style>
+    body {
+        margin: 0;
+    }
+    .content {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(100px, 293px));
+        justify-content: center;
+        grid-gap: 28px;
+    }
+    .post {
+        cursor: pointer;
+        position: relative;
+        display: block;
+    }
+    .content__image {
+        margin: 0;
+    }
+    .content__image img {
+        width: 100%;
+        vertical-align: top;
+    }
+    .content__post {
+        background: rgba(0, 0, 0, 0.4);
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-align: center;
+    }
+    .post:hover .content__post {
+        display: flex;
+    }
+    .content__likes, .content__comments {
+        width: 80px;
+        margin: 5px;
+        font-weight: bold;
+        text-align: center;
+        display: inline-block;
+    }
+    @media screen and (max-width: 768px) {
+        .content {
+            grid-gap: 3px;
+        }
+    }
+</style>
+</head>
+<body>
+    <section class="content">
+        <a href="" class="post">
+            <figure class="content__image">
+                <img src="https://images.pexels.com/photos/1589282/pexels-photo-1589282.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+            </figure>
+            <div class="content__post">
+                <p>
+                    <span class="content__likes">30</span>
+                    <span class="content__comments">150</span>
+                </p>
+            </div>
+        </a>
+        <a href="" class="post">
+            <figure class="content__image">
+                <img src="https://images.pexels.com/photos/1589282/pexels-photo-1589282.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+            </figure>
+            <div class="content__post">
+                <p>
+                    <span class="content__likes">30</span>
+                    <span class="content__comments">150</span>
+                </p>
+            </div>
+        </a>
+        <a href="" class="post">
+            <figure class="content__image">
+                <img src="https://images.pexels.com/photos/1589282/pexels-photo-1589282.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+            </figure>
+            <div class="content__post">
+                <p>
+                    <span class="content__likes">30</span>
+                    <span class="content__comments">150</span>
+                </p>
+            </div>
+        </a>
+        <a href="" class="post">
+            <figure class="content__image">
+                <img src="https://images.pexels.com/photos/1589282/pexels-photo-1589282.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+            </figure>
+            <div class="content__post">
+                <p>
+                    <span class="content__likes">30</span>
+                    <span class="content__comments">150</span>
+                </p>
+            </div>
+        </a>
+        <a href="" class="post">
+            <figure class="content__image">
+                <img src="https://images.pexels.com/photos/1589282/pexels-photo-1589282.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+            </figure>
+            <div class="content__post">
+                <p>
+                    <span class="content__likes">30</span>
+                    <span class="content__comments">150</span>
+                </p>
+            </div>
+        </a>
+        <a href="" class="post">
+            <figure class="content__image">
+                <img src="https://images.pexels.com/photos/1589282/pexels-photo-1589282.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+            </figure>
+            <div class="content__post">
+                <p>
+                    <span class="content__likes">30</span>
+                    <span class="content__comments">150</span>
+                </p>
+            </div>
+        </a>
+        <a href="" class="post">
+            <figure class="content__image">
+                <img src="https://images.pexels.com/photos/1589282/pexels-photo-1589282.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+            </figure>
+            <div class="content__post">
+                <p>
+                    <span class="content__likes">30</span>
+                    <span class="content__comments">150</span>
+                </p>
+            </div>
+        </a>
+        <a href="" class="post">
+            <figure class="content__image">
+                <img src="https://images.pexels.com/photos/1589282/pexels-photo-1589282.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+            </figure>
+            <div class="content__post">
+                <p>
+                    <span class="content__likes">30</span>
+                    <span class="content__comments">150</span>
+                </p>
+            </div>
+        </a>
+        <a href="" class="post">
+            <figure class="content__image">
+                <img src="https://images.pexels.com/photos/1589282/pexels-photo-1589282.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+            </figure>
+            <div class="content__post">
+                <p>
+                    <span class="content__likes">30</span>
+                    <span class="content__comments">150</span>
+                </p>
+            </div>
+        </a>
+        <a href="" class="post">
+            <figure class="content__image">
+                <img src="https://images.pexels.com/photos/1589282/pexels-photo-1589282.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+            </figure>
+            <div class="content__post">
+                <p>
+                    <span class="content__likes">30</span>
+                    <span class="content__comments">150</span>
+                </p>
+            </div>
+        </a>
+        <a href="" class="post">
+            <figure class="content__image">
+                <img src="https://images.pexels.com/photos/1589282/pexels-photo-1589282.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+            </figure>
+            <div class="content__post">
+                <p>
+                    <span class="content__likes">30</span>
+                    <span class="content__comments">150</span>
+                </p>
+            </div>
+        </a>
+    </section>
+</body>
+</html>

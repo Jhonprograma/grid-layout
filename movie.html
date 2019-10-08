@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <title>Movies Platzi</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+        .container {
+            /* height: 100vh; */
+            display: grid;
+            grid-template: 70px  1fr 1fr 1fr/ 70px 1fr 1fr 1fr;
+            grid-template-areas: "header header header header"
+                                  "left content content content"
+                                  "left content content content"
+                                  "left content content content"
+        }
+        .header {
+            background-color: #FA6566;
+            grid-area: header;
+            display: grid;
+            grid-template: 80px / 20% 60% 20%;
+        }
+        .header__section {
+            display: grid;
+            grid-template: 80px / 1fr 1fr;
+        }
+        .header__img {
+            margin: 0;
+            align-self: center;
+            justify-self: end;
+        }
+        .header__title {
+            color: white;
+            margin: 0;
+            align-self: center;
+        }
+        .busqueda {
+            justify-self: center;
+            align-self: center;
+        }
+        .busqueda input {
+            width: 400px;
+            height: 20px;
+            border-radius: 10px;
+        }
+        .content__left {
+            grid-area: left;
+            background-color: #FA6566;
+            display: grid;
+            grid-template: 20% 20% 20% 40% / 1fr;
+        }
+        .content {
+            grid-area: content;
+            /* overflow: scroll; */
+        }
+        .user {
+            display: grid;
+            grid-template: 80px / 50% 30% 20%;
+        }
+        .user__name {
+            margin: 0;
+            color: white;
+            align-self: center;
+            justify-self: end;
+        }
+        .user__name--img {
+            align-self: center;
+            justify-self: center;
+        }
+        .content__item {
+            display: grid;
+            grid-template: 1fr / 1fr;
+            justify-items: center;
+        }
+        figure {
+            margin: 0;
+            align-self: end;
+            text-align: center;
+        }
+        p {
+            margin: 0;
+            color: white;
+        }
+        .content__item--ajustes {
+            align-self: end;
+            padding-bottom: 20px;
+        }
+        .content__movie1 {
+            display: grid;
+            grid-template-columns: 200px 200px 200px;
+            grid-template-rows: 250px;
+            grid-gap: 5px;
+            justify-content: space-evenly;
+        }
+        .title {
+            margin: 10px;
+        }
+        .img_item {
+            width: 200px;
+            height: 250px;
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <header class="header">
+            <div class="header__section">
+                <figure class="header__img">
+                    <img src="images/icons8-popcorn.png" alt="">
+                </figure>
+                <h1 class="header__title">Movies.platzi</h1>
+            </div>
+            <div class="busqueda">
+                <input type="text" placeholder="Busca tu peli, actor, actriz o director favorito">
+                <button type="submit">Buscar</button>
+            </div>
+            <div class="user">
+                <p class="user__name">John Conor</p>
+                <img class="user__name--img" src="images/icons8-cyborg.png" alt="">
+            </div>
+        </header>
+        <section class="content__left">
+            <div class="content__item">
+                <figure>
+                    <img src="images/icons8-a_home.png" alt="home">
+                </figure>
+                <p>Home</p>
+            </div>
+            <div class="content__item">
+                <figure>
+                    <img src="images/icons8-fire_element.png" alt="">
+                </figure>
+                <p>Trending</p>
+            </div>
+            <div class="content__item">
+                <figure>
+                    <img src="images/icons8-add_to_favorites.png" alt="">
+                </figure>
+                <p>Favorites</p>
+            </div>
+            <div class="content__item">
+                <div class="content__item--ajustes">
+                    <figure>
+                        <img src="images/icons8-settings_filled.png" alt="">
+                    </figure>
+                    <p>Ajustes</p>
+                </div>
+            </div>
+        </section>
+        <section class="content">
+            <h2 class="title">ahora en el cine</h2>
+            <div class="content__movie1">
+                <div class="item"><img class="img_item" src="images/999441.jpg.png" alt=""></div>
+                <div class="item"><img class="img_item" src="images/217254.jpg.png" alt=""></div>
+                <div class="item"><img class="img_item" src="images/216667.jpg.png" alt=""></div>
+            </div>
+            <h2 class="title">Aclamadas por la critica</h2>
+            <div class="content__movie1">
+                <div class="item"><img class="img_item" src="images/216637.jpg.png" alt=""></div>
+                <div class="item"><img class="img_item" src="images/216350.jpg.png" alt=""></div>
+                <div class="item"><img class="img_item" src="images/216139.jpg.png" alt=""></div>
+            </div>
+            <h2 class="title">No te debes perder</h2>
+            <div class="content__movie1">
+                <div class="item"><img class="img_item" src="images/215726.jpg.png" alt=""></div>
+                <div class="item"><img class="img_item" src="images/217254.jpg.png" alt=""></div>
+                <div class="item"><img class="img_item" src="images/215548.jpg.png" alt=""></div>
+            </div>
+        </section>
+    </section>
+</body>
+</html>

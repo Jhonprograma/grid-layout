@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <title>funciones</title>
+    <style>
+        body {
+    margin: 0;
+}
+.container {
+    display: grid;
+    /* grid-template-columns: 20% 60% 20%; */
+    /* podemos agregar propiedades como auto auto auto signica que donde tenga el contenido no se va a ver afectado 0 me va a dividir en pardes iguales o con la unidad de 1fr que signica fracciones de 33,3 y para repetir nuestra unidad pero 3 o 4 veces usamos una funcion de css que es repeat(nveces, 1fr)*/
+    /* grid-template: 200px 200px 200px 200px/ repeat(5, 1fr);
+    tambien podemos poner una funcion dentro de otra funcion con minmax() que es que le damos el valor de fr y le deciomos el valor minimo que puede tener mi columna esto nos va a soportar cierto responsive diciendo que cuando mi columna llegue a ierta cantidad de px dejara de hacer responsive*/
+    /* grid-template: 200px 200px 200px 200px/ repeat(5, minmax(200px, 1fr)); */
+    /* grid-template: 200px 200px 200px 200px/ minmax(200px, 1fr) 1fr 1fr 1fr 1fr; con esto le estamos diciendo que nuestra primera columna llegue a 200px no se va a responsidear pero las demas columnas si */
+    grid-template: 200px 200px 200px 200px/ minmax(200px, 1fr) 1fr 1fr 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+/* con esta tipo de seudo clase elejimos como cuarto elemento */
+.item:nth-of-type(5){
+    /* background: #01024e; */
+    background-color: white;
+    overflow: auto;
+    display: grid;
+    grid-template: 100px 100px/ 50% 50%;
+    /* grid-column-gap: 5px; */
+    /* grid-row-gap: 5px; */
+    /* con esta opcion utilizamos las dos ultimas */
+    grid-gap: 10px 10px;
+}
+.item .item:nth-of-type(1){
+    background-color: #293462;
+}
+.item .item:nth-of-type(2){
+    background-color: #216583;
+}
+.item .item:nth-of-type(3){
+    background-color: #00818a;
+}
+.item .item:nth-of-type(4){
+    background-color: #f7be16;
+}
+
+.item {
+    color: white;
+    background-color: #cf455c;
+    padding: 5px;
+    /* cuando le aplicamos margin como tan aumenta el espaciado de nuestros elementos pero que tal si quiero ese espacio pero sin afectar mi elemento */
+    /* margin-right: 10px; */
+    /* margin-bottom: 10px; */
+    /* usamos; */
+    /* grid-column-gap */
+}
+    </style>
+</head>
+<body>
+    <section class="container">
+        <div class="item">
+            <!-- con emmet .nameClass{name #$}*cantidad -->
+
+        </div>
+        <div class="item">
+        </div>
+        <div class="item">
+        </div>
+        <div class="item">contenido #4</div>
+        <div class="item">
+            <div class="item">subitem #1</div>
+            <div class="item">subitem #2</div>
+            <div class="item">subitem #3</div>
+            <div class="item">subitem #4</div>
+        </div>
+        <div class="item">contenido #6</div>
+        <div class="item">contenido #7</div>
+        <div class="item">contenido #8</div>
+        <div class="item">contenido #9</div>
+        <div class="item">contenido #10</div>
+        <div class="item">contenido #11</div>
+        <div class="item">contenido #12</div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <title>funciones</title>
+    <style>
+body {
+    margin: 0;
+}
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 5px;
+}
+.item {
+    color: white;
+    background-color: #cf455c;
+    padding: 5px;
+}
+.item:nth-of-type(1){
+    background-color: #341677;
+    grid-column-start: 1;
+    grid-column-end: 8;
+}
+.item:nth-of-type(2){
+    background-color: #341677;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+.item:nth-of-type(3){
+    background-color: #341677;
+    grid-column-start: 5;
+    grid-column-end: 8;
+}
+.item:nth-of-type(4){
+    grid-column: 5 / span 2;
+}
+.item:nth-of-type(5){
+    /* cuando le decimos span le indico la cantidad de espacios o bloques */
+    /* grid-column: 1 / span 3; */
+    /* grid-column: 1 / -1; con -1 le indicamos que ocupe el espacio restante Algo importante a destacar es que el -1 que se utiliza representa el final del grid explícito, y no necesariamente el final del espacio horizontal/vertical que haya disponible. */
+    /* grid-column: 1 / -1; */
+}
+    </style>
+</head>
+<body>
+    <section class="container">
+        <div class="item">item #1</div>
+        <div class="item">item #2</div>
+        <div class="item">item #3</div>
+        <div class="item">item #4</div>
+        <div class="item">item #5</div>
+        <div class="item">item #6</div>
+        <div class="item">item #7</div>
+        <div class="item">item #8</div>
+        <div class="item">item #9</div>
+        <div class="item">item #10</div>
+        <div class="item">item #11</div>
+        <div class="item">item #12</div>
+    </section>
+</body>
+</html>

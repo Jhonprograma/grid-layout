@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <title>funciones</title>
+    <style>
+body {
+    margin: 0;
+}
+.container {
+    display: grid;
+    /* grid-template-columns: 20% 60% 20%; */
+    /* podemos agregar propiedades como auto auto auto signica que donde tenga el contenido no se va a ver afectado 0 me va a dividir en pardes iguales o con la unidad de 1fr que signica fracciones de 33,3 y para repetir nuestra unidad pero 3 o 4 veces usamos una funcion de css que es repeat(nveces, 1fr)*/
+    /* grid-template: 200px 200px 200px 200px/ repeat(5, 1fr);
+    tambien podemos poner una funcion dentro de otra funcion con minmax() que es que le damos el valor de fr y le deciomos el valor minimo que puede tener mi columna esto nos va a soportar cierto responsive diciendo que cuando mi columna llegue a ierta cantidad de px dejara de hacer responsive*/
+    /* grid-template: 200px 200px 200px 200px/ repeat(5, minmax(200px, 1fr)); */
+    /* grid-template: 200px 200px 200px 200px/ minmax(200px, 1fr) 1fr 1fr 1fr 1fr; con esto le estamos diciendo que nuestra primera columna llegue a 200px no se va a responsidear pero las demas columnas si */
+    /* height: 100vh; con esta propiedad le decimos que mis elementos ocupen todo el espacio de mi pantalla hacia abajo */
+    height: 100vh;
+    grid-template: 100px 1fr 150px/ 300px 1fr;
+    /* grid-column-gap: 10px; */
+    /* grid-row-gap: 10px; */
+    grid-gap: 5px;
+    /* para darle un estilo a nuestro layout tenemos que definirlo basicamente con palabras masomenos asi eso lo designamos con
+    grid template areas
+    "header"
+    "left content"
+    "footer" */
+    grid-template-areas: "header header"
+                         "left content"
+                         "footer footer";
+}
+.item {
+    color: white;
+    background-color: #cf455c;
+    padding: 5px;
+    /* cuando le aplicamos margin como tan aumenta el espaciado de nuestros elementos pero que tal si quiero ese espacio pero sin afectar mi elemento */
+    /* margin-right: 10px; */
+    /* margin-bottom: 10px; */
+    /* usamos; */
+    /* grid-column-gap */
+}
+.header{
+    grid-area: header;
+    background-color: #090088;
+}
+.left {
+    grid-area: left;
+    background-color: #930077;
+}
+.content {
+    grid-area: content;
+    background-color: #e4007c;
+}
+.footer {
+    grid-area: footer;
+    background-color: #ffbd39;
+}
+    </style>
+</head>
+<body>
+    <section class="container">
+        <div class="item header">
+            header
+        </div>
+        <div class="item left">
+            left
+        </div>
+        <div class="item content">
+            content
+        </div>
+        <div class="item footer">
+            footer
+        </div>
+    </section>
+</body>
+</html>
