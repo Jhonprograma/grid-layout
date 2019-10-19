@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <title>platzivideo</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+    }
+    .section {
+        height: 100vh;
+        display: grid;
+        grid-template: 1fr 1fr / 250px 1fr;
+        grid-template-areas: "info video"
+                             "info caracter"
+    }
+    .info {
+        padding: 20px;
+        grid-area: info;
+        background: #151B30;
+        color: white;
+    }
+    .info__title {
+        text-align: center;
+    }
+    .info__subtitle {
+        text-align: center;
+    }
+    .info__list li {
+        margin-bottom: 10px;
+        font-size: 12px;
+    }
+    strong {
+        color: red;
+    }
+    .video {
+        grid-area: video;
+    }
+    .video__frame {
+        width: 100%;
+        height: 400px;
+    }
+    .info__user {
+        display: flex;
+    }
+    .caracter {
+        grid-area: caracter;
+        display: grid;
+        grid-template: 100px 1fr / 1fr;
+    }
+    .caracter__info__title h3 {
+        margin-left: 20px;
+    }
+    .caracter__info__buttons {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr;
+    }
+    .favorites {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .favorites__button {
+        padding: 5px;
+        background-color: #F6415B;
+        color: white;
+        border-radius: 10px;
+    }
+    .buttons {
+        display: flex;
+        justify-content: space-around;
+    }
+    .buttons button {
+        padding: 5px;
+        border-radius: 10px;
+        width: 100px;
+        color: white;
+    }
+    .buttons button:nth-of-type(1) {
+        background-color: #A15AFD;
+    }
+    .buttons button:nth-of-type(2) {
+        background-color: #3EEBC5;
+    }
+    .buttons button:nth-of-type(3) {
+        background-color: #E01622;
+    }
+    .buttons button:nth-of-type(4) {
+        background-color: #ED3084;
+    }
+    .caracter__coments {
+        overflow: scroll;
+        padding: 0 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .coments__item {
+        display: flex;
+    }
+    .coments__item-img {
+        align-self: center;
+        margin: 10px;
+    }
+    .coments__item-img img {
+        width: 50px;
+    }
+    .coments__item-user {
+        align-self: center;
+    }
+    .coments__item-user h4 {
+        margin: 0;
+    }
+    .coments__item-user p {
+        margin: 0;
+    }
+    .sugerences__item img {
+        width: 250px;
+    }
+</style>
+<body>
+    <section class="section">
+        <div class="info">
+            <h1 class="info__title">Platzi<strong>Video</strong></h1>
+            <h3 class="info__subtitle">Mi Playlist</h3>
+            <ol class="info__list">
+                <li>5 Reason to choose a notebook over a computer desktop</li>
+                <li>Get around easily with a new york limousine service</li>
+                <li>how to cook a tender juicy steak</li>
+                <li>the science of supertitions</li>
+                <li>5 Reason to choose a notebook over a computer desktop</li>
+                <li>Get around easily with a new york limousine service</li>
+                <li>how to cook a tender juicy steak</li>
+                <li>the science of supertitions</li>
+                <li>5 Reason to choose a notebook over a computer desktop</li>
+                <li>how to cook a tender juicy steak</li>
+            </ol>
+            <div class="info__section">
+                <h3 class="info__subtitle">Playlist de Aamigos</h3>
+                <div class="info__user">
+                    <img src="images/icons8-cyborg.png" alt="">
+                    <p>John conor</p>
+                </div>
+                <div class="info__user">
+                    <img src="images/icons8-cyborg.png" alt="">
+                    <p>John conor</p>
+                </div>
+                <div class="info__user">
+                    <img src="images/icons8-cyborg.png" alt="">
+                    <p>John conor</p>
+                </div>
+                <div class="info__user">
+                    <img src="images/icons8-cyborg.png" alt="">
+                    <p>John conor</p>
+                </div>
+            </div>
+        </div>
+        <div class="video">
+                <iframe class="video__frame" src="https://www.youtube.com/embed/dn4kkmko1_8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </iframe>
+        </div>
+        <div class="caracter">
+            <div class="caracter__info">
+                <div class="caracter__info__title">
+                    <h3>Gigi D'Agostino - La passion</h3>
+                </div>
+                <div class="caracter__info__buttons">
+                    <div class="favorites">
+                        <button class="favorites__button">Agreagar a mi lista </button>
+                        <img src="images/icons8-share.png" alt="compartir">
+                        <img src="images/icons8-like.png" alt="">
+                    </div>
+                    <div class="buttons">
+                        <button>Eletronic</button>
+                        <button>Rock</button>
+                        <button>80</button>
+                        <button>60</button>
+                    </div>
+                </div>
+            </div>
+            <div class="caracter__coments">
+                <div class="comments">
+                    <h3>Comentarios</h3>
+                    <input type="text" placeholder="agregar comentario">
+                    <div class="coments__item">
+                        <div class="coments__item-img">
+                            <img src="https://i.postimg.cc/9fxWKymc/IMG-20190608-184149.png" alt="">
+                        </div>
+                        <div class="coments__item-user">
+                            <h4>Gordon Carroll</h4>
+                             <p>que cancion ta genial</p>
+                        </div>
+                    </div>
+                    <div class="coments__item">
+                        <div class="coments__item-img">
+                            <img src="https://i.postimg.cc/9fxWKymc/IMG-20190608-184149.png" alt="">
+                        </div>
+                        <div class="coments__item-user">
+                            <h4>Gordon Carroll</h4>
+                             <p>que cancion ta genial</p>
+                        </div>
+                    </div>
+                    <div class="coments__item">
+                        <div class="coments__item-img">
+                            <img src="https://i.postimg.cc/9fxWKymc/IMG-20190608-184149.png" alt="">
+                        </div>
+                        <div class="coments__item-user">
+                            <h4>Gordon Carroll</h4>
+                             <p>que cancion ta genial</p>
+                        </div>
+                    </div>
+                    <div class="coments__item">
+                        <div class="coments__item-img">
+                            <img src="https://i.postimg.cc/9fxWKymc/IMG-20190608-184149.png" alt="">
+                        </div>
+                        <div class="coments__item-user">
+                            <h4>Gordon Carroll</h4>
+                             <p>que cancion ta genial</p>
+                        </div>
+                    </div>
+                    <div class="coments__item">
+                        <div class="coments__item-img">
+                            <img src="https://i.postimg.cc/9fxWKymc/IMG-20190608-184149.png" alt="">
+                        </div>
+                        <div class="coments__item-user">
+                            <h4>Gordon Carroll</h4>
+                             <p>que cancion ta genial</p>
+                        </div>
+                    </div>
+                    <div class="coments__item">
+                        <div class="coments__item-img">
+                            <img src="https://i.postimg.cc/9fxWKymc/IMG-20190608-184149.png" alt="">
+                        </div>
+                        <div class="coments__item-user">
+                            <h4>Gordon Carroll</h4>
+                             <p>que cancion ta genial</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sugerences">
+                    <h3>Sugerencias</h3>
+                    <div class="sugerences__item">
+                        <img src="https://images.pexels.com/photos/1521305/pexels-photo-1521305.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+                        <p>Quick and Easy lunches for the cooking challenged</p>
+                    </div>
+                    <div class="sugerences__item">
+                        <img src="https://images.pexels.com/photos/45170/kittens-cat-cat-puppy-rush-45170.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+                        <p>Quick and Easy lunches for the cooking challenged</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
